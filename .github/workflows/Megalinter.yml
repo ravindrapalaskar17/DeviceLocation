@@ -7,12 +7,6 @@ name: MegaLinter
 
 # Controls when the workflow will run
 on:
-  # Triggers the workflow on push or pull request events but only for the "main" branch
-  push:
-    branches: [ "main","Test_linting"]
-  pull_request:
-    branches: [ "main" ,"Test_linting"]
-
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
 
@@ -49,7 +43,7 @@ jobs:
       - name: Install Spectral functions
         run: npm install -g @stoplight/spectral-functions
       - name: Run spectral:oas Spectral Linting
-        run: spectral lint code/API_definitions/sample.yaml --verbose .spectral.yml > spectral.log 2>&1
+        run: spectral lint code/API_definitions/sample.yaml --verbose .spectral.yml
         # Replace openapi.yaml file with your API specification file
         # Save Spectral report log file
       - name: Save Spectral report log
