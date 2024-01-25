@@ -178,13 +178,3 @@ rules:
       function: casing
       functionOptions:
         type: camel
-
-  camara-schema-casing-convention:
-    description: This rule checks schema should follow a specific case convention pascal case.
-    message: "{{property}} should be pascal (uppper camel case)"
-    severity: warn
-    given: $.components.schemas[*]~
-    then:
-      function: casing
-      functionOptions:
-        type: pascal
