@@ -36,9 +36,9 @@ jobs:
           token: ${{ secrets.GITHUB_TOKEN }}
           fetch-depth: 0 # If you use VALIDATE_ALL_CODEBASE = true, you can remove this line to improve performances
       - name: Install Spectral
-        run: npm install -g  @stoplight/spectral-cli 
+        run: npm install -g  @stoplight/spectral-cli@latest
       - name: Install Spectral functions
-        run: npm install -g @stoplight/spectral-functions
+        run: npm install -g @stoplight/spectral-functions@latest
       - name: Run spectral:oas Spectral Linting
         run: spectral lint code/API_definitions/*.yaml --verbose --ruleset .spectral.yml
         # Replace openapi.yaml file with your API specification file
