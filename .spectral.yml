@@ -1,8 +1,8 @@
 extends: "spectral:oas"
 functions:
-  - camara-reserved-words
-  - camara-language-avoid-telco
-  - camara-security-no-secrets-in-path-or-query-parameters
+  - ./lint_function/camara-reserved-words
+  - ./lint_function/camara-reserved-words
+  - ./lint_function/camara-security-no-secrets-in-path-or-query-parameters
 functionsDir: "./lint_function"
 rules:
   #  Built-in OpenAPI Specification ruleset. Each rule then can be enabled individually.
