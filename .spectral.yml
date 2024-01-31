@@ -1,7 +1,7 @@
 extends: "spectral:oas"
 functions:
   - camara-security-no-secrets-in-path-or-query-parameters
-  - camara-language-avoid-telco.js
+  - camara-language-avoid-telco
   - camara-reserved-words
  
 functionsDir: "./lint_function"
